@@ -1,0 +1,47 @@
+.portfolio {
+    padding-top: 82px;
+    padding-bottom: 100px;
+
+    .title {
+        margin-bottom: 70px;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    .gallery-menu {
+        width: 17%;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+
+        .menu-item {
+            padding: 17px 0;
+        }
+
+        .link {
+            color: #4d4d4d;
+            font-size: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+
+            &:hover {
+                color: #a91aef;
+            }
+        }
+    }
+
+    .gallery {
+        width: 83%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .project {
+            display: block;
+            margin-bottom: 35px;
+        }
+    }
+}

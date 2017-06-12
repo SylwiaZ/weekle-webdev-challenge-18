@@ -1,0 +1,46 @@
+body {
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $base-font;
+    font-family: 'Raleway', sans-serif;
+    color: #494949;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.hd-2 {
+    font-size: 53px;
+    color: #15263e;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hd-3 {
+    font-size: 26px;
+    color: #4d4d4d;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.copyrights {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}

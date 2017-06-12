@@ -1,0 +1,45 @@
+.home {
+    height: 737px;
+    color: #fff;
+    background: url("../../asset/img/bg-home.jpg") center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 37px;
+
+    .hd-1 {
+        text-transform: uppercase;
+        font-size: 215px;
+        width: 52%;
+        line-height: 115px;
+        width: 52%;
+        margin: 0 auto;
+        
+        .up-text {
+            font-size: 23%;
+        }
+        
+        .main-text {
+            letter-spacing: 10px;
+            @include text-gradient();
+        }
+        
+        .sub-text {
+            font-size: 57%;
+            letter-spacing: 58px;
+        }
+    }
+    
+    .sub-headline {
+        font-size: 27px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.3;
+        word-spacing: 2px;
+        margin-top: 0;
+        margin-bottom: 58px;
+    }
+    
+    .btn {
+        @include btn();
+    }
+}

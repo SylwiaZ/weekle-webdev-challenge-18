@@ -1,0 +1,117 @@
+.about {
+
+    .designer {
+        height: 597px;
+        background: url("../../asset/img/designer-photo.jpg") center no-repeat;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 127px;
+            padding-bottom: 134px;
+        }
+
+        .describe {
+            width: 29%;
+            text-align: right;
+
+            .title {
+                text-align: right;
+            }
+
+            .hd-2 {
+                margin-bottom: 10px;
+            }
+
+            .sub-title {
+                font-size: 21px;
+                font-weight: 700;
+                color: #a21af0;
+                text-transform: uppercase;
+            }
+
+            .text {
+                line-height: 2;
+                margin: 28px 0 0 0;
+            }
+        }
+
+        .skills {
+            width: 29%;
+            list-style: none;
+            text-align: center;
+            padding: 30px 0 0 0;
+            margin: 0;
+
+            .skills-item:not(:last-child) {
+                margin-bottom: 38px;
+            }
+
+            .skill-name {
+                font-size: 19px;
+                font-weight: 700;
+                color: #4d4d4d;
+                text-transform: uppercase;
+                margin: 0 0 10px 0;
+            }
+
+            .progress {
+                height: 11px;
+                width: 331px;
+                display: inline-block;
+                border-radius: 6px;
+                @include background-gradient();
+            }
+        }
+
+    }
+
+    .contact-bar {
+        background-color: #dcdcde;
+        padding: 101px 0 113px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-item {
+            font-size: 19px;
+            color: #4d4d4d;
+            width: 33.33333%;
+            display: flex;
+
+            .data {
+                margin: 0 0 0 35px;
+            }
+
+            .data-name {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 23px;
+            }
+
+            .item {
+                line-height: 1.3;
+                margin: 0;
+            }
+
+            .link {
+                color: #4d4d4d;
+                text-transform: none;
+            }
+            .icon-mobile {
+                @include icon(87px, 44px);
+                background-color: $blue-bg;
+            }
+            .icon-location {
+                @include icon(87px, 36px);
+                background-color: $blue-bg;
+            }
+            .icon-email {
+                @include icon(87px, 30px);
+                background-color: $blue-bg;
+            }
+        }
+    }
+}

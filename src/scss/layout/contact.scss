@@ -1,0 +1,66 @@
+.contact {
+    padding-top: 72px;
+    padding-bottom: 66px;
+    background: url(../../asset/img/bg-contact.jpg) center no-repeat;
+    background-size: cover;
+
+    .form-box {
+        background-color: $blue-bg;
+        padding: 69px 100px 95px 100px;
+    }
+
+    .title {
+        margin-bottom: 74px;
+
+        .hd-2 {
+            color: #fff;
+            margin-bottom: 26px;
+        }
+
+        .sub-title {
+            color: #fff;
+        }
+    }
+
+    .form {
+        font-size: 18px;
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+
+        .form-item {
+            width: 31%;
+            margin-bottom: 22px;
+        }
+        
+        .submit {
+            text-align: center;
+            margin: 0;
+        }
+
+        .data, .message {
+            color: $base-col-text;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        .data {
+            height: 55px;
+            width: 100%;
+            padding: 0 25px;
+        }
+
+        .message {
+            height: 110px;
+            width: 100%;
+            padding: 8px 25px;
+            margin-bottom: 34px;
+        }
+
+        .btn {
+            @include btn();
+        }
+    }
+}

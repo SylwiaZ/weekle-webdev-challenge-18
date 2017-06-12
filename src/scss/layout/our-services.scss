@@ -1,0 +1,37 @@
+.our-services {
+    padding-top: 82px;
+    padding-bottom: 68px;
+    .content {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .service-box {
+        width: 33%;
+        text-align: center;
+        padding: 40px 0 40px 0;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .hd-3 {
+        margin-top: 27px;
+        margin-bottom: 23px;
+    }
+
+    .service-text {
+        line-height: 2;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        margin: 0;
+    }
+
+    .icon {
+        @include icon(114px, 43px);
+        @include background-gradient();
+    }
+
+}

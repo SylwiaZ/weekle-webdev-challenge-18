@@ -1,0 +1,43 @@
+@mixin btn() {
+    height: 67px;
+    width: 214px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    @include background-gradient();
+    transition: background-image 0.5s ease;
+    
+    &:hover {
+        @include background-gradient(49deg, #ff0072, #a21af0);
+    }
+}
+
+@mixin icon($size, $font) {
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    &:before {
+        font-size: $font;
+        color: #fff;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin background-gradient($direction: 49deg, $start-color: #a21af0, $end-color: #ff0072) {
+    background-image: linear-gradient($direction, $start-color, $end-color);
+}
+
+@mixin text-gradient($direction: 49deg, $start-color: #a21af0, $end-color: #ff0072) {
+    background: -webkit-linear-gradient($direction, $start-color, $end-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
