@@ -2,44 +2,83 @@
     padding-top: 94px;
     padding-bottom: 78px;
 
+    @media (max-width: $mq-tablet) {
+        padding: 60px 0;
+    }
+
     .title {
         margin-bottom: 72px;
+
+        @media (max-width: $mq-tablet) {
+            margin-bottom: 50px;
+        }
     }
 
     .content {
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: $mq-tablet) {
+            flex-direction: column;
+        }
+
         .post {
             width: 32%;
+
+            @media (max-width: $mq-tablet) {
+                width: 100%;
+                text-align: center;
+                padding: 0 15px;
+                margin-bottom: 40px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (max-width: $mq-tablet) {
+                padding: 0;
+            }
         }
-        
+
         .link-post {
             display: block;
             margin-bottom: 38px;
-            
+
+            @media (max-width: $mq-tablet) {
+                margin-bottom: 25px;
+            }
+
             &:hover {
                 opacity: 0.7;
             }
         }
-        
+
         .photo {
             width: 100%;
             display: block;
+
+            @media (max-width: $mq-tablet) {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            @media (max-width: $mq-mobile) {
+                width: 100%;
+            }
         }
 
         .hd-3 {
             font-size: 23px;
             color: #15263e;
             text-transform: none;
-            line-height: 2;
-            margin-bottom: 6px;
+            margin-bottom: 14px;
 
             .link {
                 color: inherit;
                 text-transform: inherit;
                 display: inline-block;
-                
+
                 &:hover {
                     color: #a21af0;
                 }
@@ -50,6 +89,8 @@
             font-weight: 700;
             text-transform: uppercase;
             color: #929292;
+            display: inline-block;
+            margin-bottom: 12px;
         }
 
         .text {

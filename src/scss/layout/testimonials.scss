@@ -3,8 +3,21 @@
     background-size: cover;
     padding: 127px 0;
 
+    @media (max-width: $mq-tablet) {
+        padding: 60px 0 80px 0;
+    }
+
     .title {
         margin-bottom: 100px;
+
+        @media (max-width: $mq-desktop) {
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: $mq-tablet) {
+            margin-bottom: 55px;
+        }
+
         .hd-2 {
             color: #fff;
             margin: 0;
@@ -18,10 +31,25 @@
         color: #fff;
         padding-left: 100px;
 
+        @media (max-width: $mq-desktop) {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
         .headline {
             width: 415px;
             display: flex;
             justify-content: space-between;
+
+            @media (max-width: $mq-desktop) {
+                margin-bottom: 35px;
+            }
+
+            @media (max-width: $mq-mobile) {
+                width: 100%;
+                flex-direction: column;
+            }
         }
 
         .ref-title {
@@ -48,6 +76,10 @@
             border: 10px solid #fff;
             border-radius: 50%;
             display: block;
+
+            @media (max-width: $mq-mobile) {
+                margin: 0 auto 20px auto;
+            }
         }
 
         .citation {
@@ -58,6 +90,15 @@
             margin: 0;
             padding: 0 60px;
             position: relative;
+
+            @media (max-width: $mq-tablet) {
+                width: 100%;
+                text-align: center;
+            }
+
+            @media (max-width: $mq-mobile) {
+                padding: 0 40px;
+            }
 
             .text {
                 margin: 0;

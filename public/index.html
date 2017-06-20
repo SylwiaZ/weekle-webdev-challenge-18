@@ -3,17 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <title>JOHN SMITH</title> 
-        
+
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="asset/css/style.css?v=1.0"> 
-        
+
         <!-- Favicons -->
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="asset/favicons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        
+
         <link rel="apple-touch-icon" sizes="57x57" href="asset/favicons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="asset/favicons/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="asset/favicons/apple-icon-72x72.png">
@@ -32,32 +32,33 @@
     <body>
         <header class="site-nav">
             <div class="container">
-                <nav class="menu container">
+                <nav class="menu">
+                    <button type="button" class="hamburger"></button>
                     <ul class="menu-list">
-                        <li class="list-item"> <a class="link active" href="">Home</a> </li>
-                        <li class="list-item"> <a class="link" href="">About</a> </li>
-                        <li class="list-item"> <a class="link" href="">Our Services</a> </li>
-                        <li class="list-item"> <a class="link" href="">Portfolio</a> </li>
-                        <li class="list-item"> <a class="link" href="">Experience</a> </li>
-                        <li class="list-item"> <a class="link" href="">Blog</a> </li>
-                        <li class="list-item"> <a class="link" href="">Contact</a> </li>
+                        <li class="list-item"> <a class="link active" href="#home">Home</a> </li>
+                        <li class="list-item"> <a class="link" href="#about">About</a> </li>
+                        <li class="list-item"> <a class="link" href="#our-services">Our Services</a> </li>
+                        <li class="list-item"> <a class="link" href="#portfolio">Portfolio</a> </li>
+                        <li class="list-item"> <a class="link" href="#experience">Experience</a> </li>
+                        <li class="list-item"> <a class="link" href="#blog">Blog</a> </li>
+                        <li class="list-item"> <a class="link" href="#contact">Contact</a> </li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main>
-            <section class="home">
+            <section id="home" class="home">
                 <div class="container">
-                    <h1 class="hd-1">
+                    <div class="headline">
                         <span class="up-text">Hello, I am</span>
                         <span class="main-text">John</span> 
                         <span class="sub-text">Smith</span>
-                    </h1>
+                    </div>
                     <p class="sub-headline">I have more then 10 years of Experience</p>
                     <button class="btn">Download CV</button>
                 </div>
             </section>
-            <section class="about">
+            <section id="about" class="about">
                 <div class="designer">
                     <div class="container">
                         <article class="describe">
@@ -71,32 +72,43 @@
                             <li class=" skills-item">
                                 <p class="skill-name">
                                     <span>Design</span>
-                                    <span class="value">( 80% )</span>
+                                    <span class="skill-value">( 80% )</span>
                                 </p>
-                                <span class="progress"></span>
+                                <div class="progress-bar">
+                                    <span class="design value"></span>
+                                </div>
                             </li>
                             <li class="skills-item">
                                 <p class="skill-name">
                                     <span>Photography</span>
-                                    <span class="value">( 65% )</span>
+                                    <span class="skill-value">( 65% )</span>
                                 </p>
-                                <span class="progress"></span>
+                                <div class="progress-bar">
+                                    <span class="photography value"></span>
+                                </div>
                             </li>
                             <li class="skills-item">
                                 <p class="skill-name">
                                     <span>Marketing</span>
-                                    <span class="value">( 50% )</span>
+                                    <span class="skill-value">( 50% )</span>
                                 </p>
-                                <span class="progress"></span>
+                                <div class="progress-bar">
+                                    <span class="marketing value"></span>
+                                </div>
                             </li>
                             <li class="skills-item">
                                 <p class="skill-name">
                                     <span>Branding</span>
-                                    <span class="value">( 30% )</span>
+                                    <span class="skill-value">( 30% )</span>
                                 </p>  
-                                <span class="progress"></span>
+                                <div class="progress-bar">
+                                    <span class="branding value"></span>
+                                </div>
                             </li>
                         </ul>
+                        <div class="designer-photo">
+                            <img class="photo" src="asset/img/designer-photo.jpg" alt="John Smith">
+                        </div>
                     </div>
                 </div>
                 <aside class="contact-bar">
@@ -136,7 +148,7 @@
                     </div>
                 </aside>
             </section>
-            <section class="our-services">
+            <section id="our-services" class="our-services">
                 <div class="container">
                     <header class="title">
                         <h2 class="hd-2">Our Services</h2>
@@ -197,7 +209,7 @@
                     </article>
                 </div>
             </section>
-            <section class="portfolio">
+            <section id="portfolio" class="portfolio">
                 <div class="container">
                     <header class="title">
                         <h2 class="hd-2">Portfolio</h2>
@@ -214,17 +226,29 @@
                             <li class="menu-item"><a class="link" href="">Icons</a></li>
                         </ul>
                         <div class="gallery">
-                            <img class="project" src="asset/img/project-1.jpg" alt="">
-                            <img class="project" src="asset/img/project-2.jpg" alt="">
-                            <img class="project" src="asset/img/project-3.jpg" alt="">
-                            <img class="project" src="asset/img/project-4.jpg" alt="">
-                            <img class="project" src="asset/img/project-5.jpg" alt="">
-                            <img class="project" src="asset/img/project-6.jpg" alt="">
+                            <div class="gallery-box">
+                                <img class="project" src="asset/img/project-1.jpg" alt="">
+                            </div>
+                            <div class="gallery-box">
+                                <img class="project" src="asset/img/project-2.jpg" alt="">
+                            </div>
+                            <div class="gallery-box">
+                                <img class="project" src="asset/img/project-3.jpg" alt="">
+                            </div>
+                            <div class="gallery-box">
+                                <img class="project" src="asset/img/project-4.jpg" alt="">
+                            </div>
+                            <div class="gallery-box">
+                                <img class="project" src="asset/img/project-5.jpg" alt="">
+                            </div>
+                            <div class="gallery-box">
+                                <img class="project" src="asset/img/project-6.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="experience">
+            <section id="experience" class="experience">
                 <div class="container">
                     <header class="title">
                         <h2 class="hd-2">Experience</h2>
@@ -261,7 +285,7 @@
                     </article>
                 </div>
             </section>
-            <section class="blog">
+            <section id="blog" class="blog">
                 <div class="container">
                     <header class="title">
                         <h2 class="hd-2">Blog</h2>
@@ -295,7 +319,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section id="contact" class="contact">
                 <div class="container">
                     <div class="form-box">
                         <div class="title">
@@ -328,5 +352,9 @@
                 <p>Copyright 2017 by PSDFreebies.com. All Rights Reserved.</p>
             </div>
         </footer>  
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="asset/js/script.js?v=1.0"></script>
     </body>
 </html>

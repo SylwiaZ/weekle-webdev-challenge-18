@@ -1,34 +1,92 @@
 .home {
-    height: 737px;
     color: #fff;
     background: url("../../asset/img/bg-home.jpg") center no-repeat;
     background-size: cover;
     text-align: center;
-    padding-top: 37px;
+    padding-top: 124px;
+    padding-bottom: 103px;
 
-    .hd-1 {
+    @media (max-width: $mq-tablet) {
+        padding-top: 155px;
+    }
+
+    .headline {
+        font-weight: 700;
         text-transform: uppercase;
-        font-size: 215px;
-        width: 52%;
-        line-height: 115px;
         width: 52%;
         margin: 0 auto;
-        
+
+        @media (max-width: $mq-wide) {
+            width: 66%;
+        }
+
+        @media (max-width: $mq-desktop) {
+            width: 100%;
+        }
+
         .up-text {
-            font-size: 23%;
+            font-size: 50px;
+            display: block;
+
+            @media (max-width: $mq-tablet) {
+                font-size: 35px;
+            }
+
+            @media (max-width: $mq-mobile) {
+                font-size: 26px;
+            }
         }
-        
+
         .main-text {
+            font-size: 215px;
             letter-spacing: 10px;
+            line-height: 170px;
+            display: block;
             @include text-gradient();
+
+            @media (max-width: $mq-desktop) {
+                font-size: 200px;
+                text-indent: 10px;
+            }
+
+            @media (max-width: $mq-tablet) {
+                font-size: 145px;
+                line-height: 130px;
+                text-indent: 0;
+                letter-spacing: normal;
+            }
+
+            @media (max-width: $mq-mobile) {
+                font-size: 105px;
+                line-height: 1;
+            }
         }
-        
+
         .sub-text {
-            font-size: 57%;
-            letter-spacing: 58px;
+            font-size: 123px;
+            letter-spacing: 57px;
+            line-height: 1;
+            display: block;
+
+            @media (max-width: $mq-desktop) {
+                font-size: 108px;
+                text-indent: 57px;
+            }
+
+            @media (max-width: $mq-tablet) {
+                font-size: 60px;
+                letter-spacing: 40px;
+                text-indent: 40px;
+            }
+
+            @media (max-width: $mq-mobile) {
+                font-size: 50px;
+                letter-spacing: 25px;
+                text-indent: 25px;
+            }
         }
     }
-    
+
     .sub-headline {
         font-size: 27px;
         font-weight: 600;
@@ -37,8 +95,23 @@
         word-spacing: 2px;
         margin-top: 0;
         margin-bottom: 58px;
+
+        @media (max-width: $mq-desktop) {
+            font-size: 25px;
+        }
+
+        @media (max-width: $mq-tablet) {
+            font-size: 23px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: $mq-mobile) {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 45px;
+        }
     }
-    
+
     .btn {
         @include btn();
     }

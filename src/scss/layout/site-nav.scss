@@ -1,18 +1,57 @@
 .site-nav {
     background-color: $blue-bg;
 
+    .container {
+        @media (max-width: $mq-desktop) {
+            padding: 0;
+        }
+    }
+
     .menu {
         padding: 31px 0 26px 0;
+
+        @media (max-width: $mq-desktop) {
+            height: 80px;
+            position: relative;
+        }
     }
 
     .menu-list {
         list-style: none;
-        padding: 0 28px;
         display: flex;
         justify-content: space-between;
+        padding: 0 28px;
+
+        @media (max-width: $mq-desktop) {
+            width: 100%;
+            background-color: $blue-bg;
+            border-top: 1px solid #364464;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
 
         .list-item {
             position: relative;
+            padding-right: 40px;
+
+            @media (max-width: $mq-wide) {
+                padding-right: 25px;
+            }
+
+            @media (max-width: $mq-desktop) {
+                text-align: center;
+                border-bottom: 1px solid #364464;
+                padding: 0;
+
+                &:hover {
+                    background-color: #192d48;
+                }
+            }
+
             &:after {
                 content: '';
                 display: block;
@@ -21,12 +60,22 @@
                 background-color: #fff;
                 position: absolute;
                 top: 50%;
-                right: -44px;
+                right: 0;
+
+                @media (max-width: $mq-desktop) {
+                    display: none;
+                }
             }
 
             &:last-child {
+                padding-right: 0;
+
                 &:after {
                     display: none;
+                }
+
+                @media (max-width: $mq-desktop) {
+                    border-bottom: none;
                 }
             }
         }
@@ -34,12 +83,68 @@
         .link {
             font-size: 19px;
             font-weight: 600;
+
+            @media (max-width: $mq-desktop) {
+                width: 100%;
+                padding: 15px 0;
+                display: inline-block;
+            }
+
             &:hover {
                 @include text-gradient();
             }
+
             &.active {
-                color: #d70ebc;
+                color: #eb0798;
             }
+        }
+    }
+
+    .hamburger {
+        height: 21px;
+        width: 30px;
+        background-color: transparent;
+        border: 0;
+        border-top: 3px solid #fff;
+        display: none;
+        cursor: pointer;
+        position: relative;
+        padding: 0;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            border-top: 3px solid #fff;
+        }
+
+        &:before {
+            transform: translateY(7px);
+            top: -1px;
+        }
+
+        &:after {
+            transform: translateY(18px);
+            top: -3px;
+        }
+
+        @media (max-width: $mq-desktop) {
+            display: block;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: 15px;
+        }
+    }
+
+    &.sticky-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        
+        .menu {
+            padding: 15px 0;   
         }
     }
 }

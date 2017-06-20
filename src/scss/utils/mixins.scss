@@ -15,9 +15,9 @@
     }
 }
 
-@mixin icon($size, $font) {
-    height: $size;
-    width: $size;
+@mixin icon($height, $width, $font) {
+    height: $height;
+    width: $width;
     border-radius: 50%;
     display: inline-block;
     position: relative;

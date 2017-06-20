@@ -1,22 +1,74 @@
 .about {
 
     .designer {
-        height: 597px;
-        background: url("../../asset/img/designer-photo.jpg") center no-repeat;
 
         .container {
             display: flex;
             justify-content: space-between;
+            position: relative;
             padding-top: 127px;
-            padding-bottom: 134px;
+            padding-bottom: 133px;
+
+            @media (max-width: $mq-wide) {
+                flex-wrap: wrap;
+                padding-top: 82px;
+                padding-bottom: 100px;
+            }
+
+            @media (max-width: $mq-tablet) {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            @media (max-width: $mq-tablet) {
+                padding-bottom: 0;
+            }
+        }
+
+        .designer-photo {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 328px);
+
+            @media (max-width: $mq-wide) {
+                width: 55%;
+                top: initial;
+                bottom: 0;
+                right: 0;
+                left: initial;
+            }
+
+            @media (max-width: $mq-desktop) {
+                width: 530px;
+            }
+
+            @media (max-width: $mq-tablet) {
+                position: static;
+                margin: 0 auto;
+            }
+
+            .photo {
+                width: 100%;
+                display: block;
+            }
         }
 
         .describe {
             width: 29%;
             text-align: right;
+            z-index: 1;
+
+            @media (max-width: $mq-wide) {
+                text-align: center;
+                margin-bottom: 40px;
+            }
 
             .title {
                 text-align: right;
+
+                @media (max-width: $mq-wide) {
+                    text-align: center;
+                }
             }
 
             .hd-2 {
@@ -34,6 +86,10 @@
                 line-height: 2;
                 margin: 28px 0 0 0;
             }
+
+            @media (max-width: $mq-wide) {
+                width: 100%;
+            }
         }
 
         .skills {
@@ -42,6 +98,24 @@
             text-align: center;
             padding: 30px 0 0 0;
             margin: 0;
+            z-index: 1;
+
+            @media (max-width: $mq-wide) {
+                width: 45%;
+            }
+
+            @media (max-width: $mq-desktop) {
+                width: 42%;
+            }
+
+            @media (max-width: $mq-tablet) {
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            @media (max-width: $mq-mobile) {
+                width: 100%;
+            }
 
             .skills-item:not(:last-child) {
                 margin-bottom: 38px;
@@ -55,24 +129,71 @@
                 margin: 0 0 10px 0;
             }
 
-            .progress {
+            .progress-bar {
                 height: 11px;
                 width: 331px;
                 display: inline-block;
                 border-radius: 6px;
-                @include background-gradient();
-            }
-        }
+                background-color: #ff0072;
 
+                @media (max-width: $mq-desktop) {
+                    width: 100%;
+                }
+            }
+
+            .value {
+                height: 100%;
+                display: block;
+                border-radius: 6px;
+                background-color: #a21af0;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    height: inherit;
+                    width: 30px;
+                    display: block;
+                    @include background-gradient(49deg, #a21af0, #ff0072);
+                    position: absolute;
+                    right: 0;
+                }
+
+                &.design {
+                    width: 80%;
+                }
+                &.photography {
+                    width: 65%;
+                }
+                &.marketing {
+                    width: 50%;
+                }
+                &.branding {
+                    width: 30%;
+                }
+            } 
+        }
     }
 
     .contact-bar {
         background-color: #dcdcde;
         padding: 101px 0 113px 0;
 
+        @media (max-width: $mq-wide) {
+            padding: 80px 0;
+        }
+
+        @media (max-width: $mq-desktop) {
+            padding: 60px 0;
+        }
+
+        @media (max-width: $mq-tablet) {
+            padding: 60px 0 20px 0;
+        }
+
         .container {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .contact-item {
@@ -81,14 +202,34 @@
             width: 33.33333%;
             display: flex;
 
+            @media (max-width: $mq-wide) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            @media (max-width: $mq-tablet) {
+                width: 100%;
+                margin: 0 auto 40px auto;
+            }
+
             .data {
+                width: 77.5%;
                 margin: 0 0 0 35px;
+
+                @media (max-width: $mq-wide) {
+                    width: 100%;
+                    margin: 0;
+                }
             }
 
             .data-name {
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-bottom: 23px;
+
+                @media (max-width: $mq-wide) {
+                    margin-bottom: 12px;
+                }
             }
 
             .item {
@@ -100,17 +241,36 @@
                 color: #4d4d4d;
                 text-transform: none;
             }
+
             .icon-mobile {
-                @include icon(87px, 44px);
+                @include icon(87px, 22.5%, 44px);
                 background-color: $blue-bg;
+
+                @media (max-width: $mq-wide) {
+                    height: 87px;
+                    width: 87px;
+                    margin: 0 auto 20px auto;
+                }
             }
             .icon-location {
-                @include icon(87px, 36px);
+                @include icon(87px, 22.5%, 36px);
                 background-color: $blue-bg;
+
+                @media (max-width: $mq-wide) {
+                    height: 87px;
+                    width: 87px;
+                    margin: 0 auto 20px auto;
+                }
             }
             .icon-email {
-                @include icon(87px, 30px);
+                @include icon(87px, 22.5%, 30px);
                 background-color: $blue-bg;
+
+                @media (max-width: $mq-wide) {
+                    height: 87px;
+                    width: 87px;
+                    margin: 0 auto 20px auto;
+                }
             }
         }
     }

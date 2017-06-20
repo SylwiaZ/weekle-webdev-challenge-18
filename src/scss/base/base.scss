@@ -5,6 +5,36 @@ body {
     font-size: $base-font;
     font-family: 'Raleway', sans-serif;
     color: #494949;
+
+    &.open {
+
+        @media (max-width: $mq-tablet) {
+            overflow-y: hidden;
+        }
+
+        .menu-list {
+            display: block;
+
+            @media (max-width: $mq-tablet) {
+                height: calc(100vh - 80px);
+                overflow-y: auto;
+            }
+        }
+
+        .hamburger {
+            border: 0;
+
+            &:before {
+                transform: translateY(7px) rotate(45deg);
+                top: 4px;
+            }
+
+            &:after {
+                transform: translateY(7px) rotate(-45deg);
+                top: 4px;
+            }
+        }
+    }
 }
 
 * {
@@ -17,6 +47,18 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: $mq-wide) {
+        width: 960px;
+    }
+
+    @media (max-width: $mq-desktop) {
+        width: 100%;
+    }
+
+    @media (max-width: $mq-tablet) {
+        width: 100%;
+    }
 }
 
 .link {
@@ -30,6 +72,10 @@ body {
     color: #15263e;
     text-transform: uppercase;
     margin: 0;
+
+    @media (max-width: $mq-mobile) {
+        font-size: 45px;
+    }
 }
 
 .hd-3 {
@@ -43,4 +89,9 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
+
+    @media (max-width: $mq-tablet) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }

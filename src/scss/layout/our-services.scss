@@ -1,6 +1,11 @@
 .our-services {
     padding-top: 82px;
     padding-bottom: 68px;
+
+    @media (max-width: $mq-tablet) {
+        padding: 60px 0;
+    }
+    
     .content {
         margin-top: 32px;
         display: flex;
@@ -11,9 +16,19 @@
     .service-box {
         width: 33%;
         text-align: center;
-        padding: 40px 0 40px 0;
+        padding: 40px 0;
+
         &:last-child {
             padding-bottom: 0;
+        }
+
+        @media (max-width: $mq-desktop) {
+            width: 50%;
+            padding: 20px 15px;
+        }
+
+        @media (max-width: $mq-tablet) {
+            width: 100%;
         }
     }
 
@@ -30,8 +45,13 @@
     }
 
     .icon {
-        @include icon(114px, 43px);
+        @include icon(114px, 114px, 43px);
+
+        @media (max-width: $mq-tablet) {
+            height: 90px;
+            width: 90px;
+        }
+
         @include background-gradient();
     }
-
 }
